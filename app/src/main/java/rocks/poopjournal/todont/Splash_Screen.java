@@ -43,14 +43,12 @@ public class Splash_Screen extends AppCompatActivity {
                     finishAffinity();
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-
                 }
                 else{
                     Intent i = new Intent(Splash_Screen.this, OnBoardingActivity.class);
                     finishAffinity();
                     startActivity(i);
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-
                 }
             }
         }, 2000);

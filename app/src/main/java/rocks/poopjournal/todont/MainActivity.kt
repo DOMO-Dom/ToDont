@@ -78,7 +78,6 @@ class MainActivity : AppCompatActivity() {
 
     //////////////////////////////////////////////////////////////////////////////////
     fun mysettings(view: View) {
-
         val intennt = Intent(this, Settings::class.java)
             startActivity(intennt)
             overridePendingTransition(0, 0)

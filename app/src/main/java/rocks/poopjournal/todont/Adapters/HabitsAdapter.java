@@ -1,13 +1,11 @@
 package rocks.poopjournal.todont.Adapters;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteException;
-import android.graphics.Color;
-import android.os.Build;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,7 +14,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
@@ -36,7 +33,6 @@ import java.util.Locale;
 
 import rocks.poopjournal.todont.Db_Controller;
 import rocks.poopjournal.todont.Fragments.HabitsFragment;
-import rocks.poopjournal.todont.Fragments.HabitsLogFragment;
 import rocks.poopjournal.todont.Helper;
 import rocks.poopjournal.todont.MainActivity;
 import rocks.poopjournal.todont.R;
@@ -72,7 +68,7 @@ public class HabitsAdapter extends RecyclerView.Adapter<HabitsAdapter.RecyclerVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final HabitsAdapter.RecyclerViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final HabitsAdapter.RecyclerViewHolder holder, @SuppressLint("RecyclerView") final int position) {
         String dTask = donotTask.get(position);
         String dCatagory = donotCatagory.get(position).replace("''","'");
         holder.task.setText(dTask);
